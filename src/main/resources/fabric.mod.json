@@ -1,17 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
-  "version": "${version}",
+  "id": "mglmod",
+  "version": "0.1.2",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "MGL Compat Pack",
+  "description": "Tells GLFW that we want OpenGL 4.6 so MGL works",
   "authors": [
-    "Me!"
+    "r58Playz"
   ],
-  "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
-  },
 
   "license": "CC0-1.0",
   "icon": "assets/modid/icon.png",
@@ -19,20 +15,17 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.github.r58playz.mgl.MGL"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "com.github.r58playz.mgl.mixin.json",
+    "com.github.r58playz.mgl.mixin.render.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.14.6",
-    "fabric": "*",
     "minecraft": "~1.19",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
