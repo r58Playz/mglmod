@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "mglmod",
+  "version": "0.1.2",
+
+  "name": "MGL Compat Pack",
+  "description": "Tells GLFW that we want OpenGL 4.6 so MGL works",
+  "authors": [
+    "r58Playz"
+  ],
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.r58playz.mgl.MGL"
+    ]
+  },
+  "mixins": [
+    "com.github.r58playz.mgl.mixin.json",
+    "com.github.r58playz.mgl.mixin.render.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  }
+}
