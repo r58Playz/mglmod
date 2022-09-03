@@ -16,6 +16,6 @@ public class MGL implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("modrinth < cursedfrog");
+		LOGGER.info("mglmod: modrinth > cursedfrog");
 	}
 }
