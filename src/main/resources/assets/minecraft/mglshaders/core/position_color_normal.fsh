@@ -2,16 +2,16 @@
 
 #moj_import <fog.glsl>
 
-uniform vec4 ColorModulator;
-uniform float FogStart;
-uniform float FogEnd;
-uniform vec4 FogColor;
+layout(location = 0) uniform vec4 ColorModulator;
+layout(location = 1) uniform float FogStart;
+layout(location = 2) uniform float FogEnd;
+layout(location = 3) uniform vec4 FogColor;
 
-in float vertexDistance;
-in vec4 vertexColor;
-in vec4 normal;
+layout(location = 3) in float vertexDistance;
+layout(location = 4) in vec4 vertexColor;
+layout(location = 5) in vec4 normal;
 
-out vec4 fragColor;
+layout(location = 0) out vec4 fragColor;
 
 void main() {
     vec4 color = vertexColor * ColorModulator;

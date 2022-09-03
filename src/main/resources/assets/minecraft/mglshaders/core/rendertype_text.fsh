@@ -2,18 +2,18 @@
 
 #moj_import <fog.glsl>
 
-uniform sampler2D Sampler0;
+layout(location = 0) uniform sampler2D Sampler0;
 
-uniform vec4 ColorModulator;
-uniform float FogStart;
-uniform float FogEnd;
-uniform vec4 FogColor;
+layout(location = 1) uniform vec4 ColorModulator;
+layout(location = 2) uniform float FogStart;
+layout(location = 3) uniform float FogEnd;
+layout(location = 4) uniform vec4 FogColor;
 
-in float vertexDistance;
-in vec4 vertexColor;
-in vec2 texCoord0;
+layout(location = 4) in float vertexDistance;
+layout(location = 5) in vec4 vertexColor;
+layout(location = 6) in vec2 texCoord0;
 
-out vec4 fragColor;
+layout(location = 0) out vec4 fragColor;
 
 void main() {
     vec4 color = texture(Sampler0, texCoord0) * vertexColor * ColorModulator;

@@ -2,19 +2,19 @@
 
 #moj_import <fog.glsl>
 
-in vec3 Position;
-in vec2 UV0;
-in vec4 Color;
-in vec3 Normal;
+layout(location = 0) in vec3 Position;
+layout(location = 1) in vec2 UV0;
+layout(location = 2) in vec4 Color;
+layout(location = 3) in vec3 Normal;
 
-uniform mat4 ModelViewMat;
-uniform mat4 ProjMat;
-uniform int FogShape;
+layout(location = 0) uniform mat4 ModelViewMat;
+layout(location = 1) uniform mat4 ProjMat;
+layout(location = 2) uniform int FogShape;
 
-out vec2 texCoord0;
-out float vertexDistance;
-out vec4 vertexColor;
-out vec4 normal;
+layout(location = 4) out vec2 texCoord0;
+layout(location = 5) out float vertexDistance;
+layout(location = 6) out vec4 vertexColor;
+layout(location = 7) out vec4 normal;
 
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);

@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MGLInitMixin {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		MGL.LOGGER.info("mglmod: PARTY! MGL WORKED TILL THE TITLE SCREEN!");
+		MGL.LOGGER.info("mglmod: PARTY! MGL WORKED UNTIL INIT!");
 	}
 }
