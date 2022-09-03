@@ -9,14 +9,9 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 @Mixin(RenderSystem.class)
 class MGLMaxTextureSizeMixin {
-    /*
-    @Inject(method = "maxSupportedTextureSize()I", at = @At("HEAD"), cancellable = true)
-    public static void maxSupportedTextureSize(CallbackInfoReturnable<Integer> cir){
-        cir.setReturnValue(Math.max(GlStateManager._getInteger(3379), 1024));
-    } */
     @Overwrite(remap = false)
     public static int maxSupportedTextureSize(){
-        MGL.LOGGER.info("mgl texture size function called");
+        MGL.LOGGER.info("mglmod: texture size function called");
         return Math.max(GlStateManager._getInteger(3379), 1024);
     }
 }

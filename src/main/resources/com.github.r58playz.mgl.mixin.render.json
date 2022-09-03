@@ -6,7 +6,9 @@
   "mixins": [
   ],
   "client": [
-    "MGLMaxTextureSizeMixin"
+    "MGLMaxTextureSizeMixin",
+    "MGLShaderRedirectMixin",
+    "MGLProgramLinkedMixin"
   ],
   "injectors": {
     "defaultRequire": 1

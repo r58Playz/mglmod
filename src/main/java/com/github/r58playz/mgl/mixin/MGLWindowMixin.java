@@ -18,6 +18,6 @@ public class MGLWindowMixin {
     private void modifyRequestedContext(WindowEventHandler eventHandler, MonitorTracker monitorTracker, WindowSettings settings, String videoMode, String title, CallbackInfo ci) {
         GLFW.glfwWindowHint(GLFW.GLFW_CONTEXT_VERSION_MAJOR, 4);
         GLFW.glfwWindowHint(GLFW.GLFW_CONTEXT_VERSION_MINOR, 6);
-        MGL.LOGGER.info("GLFW's OGL context changed to 4.6.");
+        MGL.LOGGER.info("mglmod: GLFW's OGL context changed to 4.6.");
     }
 }
