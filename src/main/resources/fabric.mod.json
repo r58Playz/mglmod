@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "mglmod",
-  "version": "0.2.1",
+  "version": "0.3.0",
 
   "name": "MGL Compat Pack",
   "description": "Various fixes for Minecraft so MGL works.",
@@ -16,6 +16,9 @@
   "entrypoints": {
     "main": [
       "com.github.r58playz.mgl.MGL"
+    ],
+    "preLaunch": [
+      "com.github.r58playz.mgl.MGLInjector"
     ]
   },
   "mixins": [
