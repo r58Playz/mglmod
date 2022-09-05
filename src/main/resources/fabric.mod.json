@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "mglmod",
+  "version": "0.3.0",
+
+  "name": "MGL Compat Pack",
+  "description": "Various fixes for Minecraft so MGL works.",
+  "authors": [
+    "Toshit Chawda"
+  ],
+
+  "license": "MIT",
+  "icon": "assets/mglmod/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.r58playz.mgl.MGL"
+    ],
+    "preLaunch": [
+      "com.github.r58playz.mgl.MGLInjector"
+    ]
+  },
+  "mixins": [
+    "com.github.r58playz.mgl.mixin.json",
+    "com.github.r58playz.mgl.mixin.render.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  }
+}
