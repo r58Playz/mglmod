@@ -8,7 +8,7 @@
   "client": [
     "MGLMaxTextureSizeMixin",
     "MGLShaderRedirectMixin",
-    "MGLProgramLinkedMixin"
+    "MGLBindAttribLocationMixin"
   ],
   "injectors": {
     "defaultRequire": 1

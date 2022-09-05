@@ -15,7 +15,7 @@ class MGLMaxTextureSizeMixin {
      */
     @Overwrite(remap = false)
     public static int maxSupportedTextureSize(){
-        MGL.LOGGER.info("mglmod: texture size function called");
+        MGL.LOGGER.debug("mglmod: texture size function called");
         return Math.max(GlStateManager._getInteger(3379), 1024);
     }
 }

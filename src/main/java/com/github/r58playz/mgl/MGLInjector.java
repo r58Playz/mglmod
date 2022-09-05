@@ -63,6 +63,7 @@ public class MGLInjector implements PreLaunchEntrypoint {
 
         } catch (IOException e) {
             MGL.LOGGER.error("mglmod: Failed to inject MGL libs. Throwing exception.");
+            MGLReporter.error("Failed to inject MGL libraries.");
             throw new RuntimeException(e);
         }
     }

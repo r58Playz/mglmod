@@ -23,7 +23,8 @@
   },
   "mixins": [
     "com.github.r58playz.mgl.mixin.json",
-    "com.github.r58playz.mgl.mixin.render.json"
+    "com.github.r58playz.mgl.mixin.render.json",
+    "com.github.r58playz.mgl.mixin.debug.json"
   ],
 
   "depends": {
