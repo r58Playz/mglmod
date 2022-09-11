@@ -12,6 +12,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.github.r58playz.mgl.MGL;
 
+import java.util.concurrent.TimeUnit;
+
 @Mixin(Window.class)
 public class MGLWindowMixin {
     @Inject(method = "<init>", remap = false, at = @At(value = "INVOKE", target = "Lorg/lwjgl/glfw/GLFW;glfwCreateWindow(IILjava/lang/CharSequence;JJ)J", shift = At.Shift.BEFORE))

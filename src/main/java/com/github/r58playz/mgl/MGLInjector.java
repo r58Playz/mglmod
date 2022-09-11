@@ -8,6 +8,8 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.io.FileUtils;
 
 public class MGLInjector implements PreLaunchEntrypoint {
@@ -60,7 +62,6 @@ public class MGLInjector implements PreLaunchEntrypoint {
             System.setProperty("org.lwjgl.glfw.libname", "libGLFW.dylib");
             System.setProperty("org.lwjgl.opengl.libname", "libMGL.dylib");
             MGL.LOGGER.debug("mglmod: MGL library path is " + mglDylibDir.toPath().toAbsolutePath());
-
         } catch (IOException e) {
             MGL.LOGGER.error("mglmod: Failed to inject MGL libs. Throwing exception.");
             MGLReporter.error("Failed to inject MGL libraries.");
