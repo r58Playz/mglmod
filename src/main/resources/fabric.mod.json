@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "mglmod",
-  "version": "0.3.0",
+  "version": "0.3.1",
 
   "name": "MGL Compat Pack",
   "description": "Various fixes for Minecraft so MGL works.",
   "authors": [
-    "Toshit Chawda"
+    "r58Playz"
   ],
 
   "license": "MIT",

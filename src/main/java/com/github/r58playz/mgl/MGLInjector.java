@@ -27,8 +27,11 @@ public class MGLInjector implements PreLaunchEntrypoint {
             // giant hack fix please
             // more :pofat: stuffs
             File mglDylibDir = new File(System.getProperty("java.library.path"));
+            Files.createDirectories(mglDylibDir.toPath());
             Path glfwDylib = mglDylibDir.toPath().resolve("libGLFW.dylib");
             Path mglDylib = mglDylibDir.toPath().resolve("libMGL.dylib");
+            MGL.LOGGER.debug("mglmod: glfwDylib is " + glfwDylib.toAbsolutePath().toString());
+            MGL.LOGGER.debug("mglmod: mglDylib is " + mglDylib.toAbsolutePath().toString());
 
             try {
                 FileUtils.deleteDirectory(new File(mglDylibDir.toPath().toAbsolutePath() + "/macos/arm64/org/lwjgl/glfw"));
