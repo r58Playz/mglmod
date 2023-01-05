@@ -1,4 +1,4 @@
-package com.github.r58playz.mgl;
+package ml.r58playz.mgl;
 
 import org.lwjgl.util.tinyfd.TinyFileDialogs;
 

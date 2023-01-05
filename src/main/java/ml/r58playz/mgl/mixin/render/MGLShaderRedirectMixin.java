@@ -1,6 +1,6 @@
-package com.github.r58playz.mgl.mixin.render;
+package ml.r58playz.mgl.mixin.render;
 
-import com.github.r58playz.mgl.MGL;
+import ml.r58playz.mgl.MGL;
 import net.minecraft.client.render.Shader;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;

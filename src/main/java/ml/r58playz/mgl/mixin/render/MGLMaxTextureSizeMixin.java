@@ -1,9 +1,9 @@
-package com.github.r58playz.mgl.mixin.render;
+package ml.r58playz.mgl.mixin.render;
 
+import ml.r58playz.mgl.MGL;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 
-import com.github.r58playz.mgl.MGL;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 

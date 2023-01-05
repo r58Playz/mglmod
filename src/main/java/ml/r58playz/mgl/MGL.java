@@ -1,4 +1,4 @@
-package com.github.r58playz.mgl;
+package ml.r58playz.mgl;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;

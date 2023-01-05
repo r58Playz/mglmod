@@ -1,4 +1,4 @@
-package com.github.r58playz.mgl;
+package ml.r58playz.mgl;
 
 import net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint;
 
@@ -19,6 +19,16 @@ public class MGLInjector implements PreLaunchEntrypoint {
         // The earliest possible entrypoint, which is called just before the game launches.
         // Use with caution to not interfere with the game's initialization.
         // Uses the type PreLaunchEntryPoint and will call onPreLaunch.
+        MGL.LOGGER.debug("mglmod: Set mglmod.Debug to true and it will wait 1min for you to attach a debugger");
+        boolean debug = Boolean.parseBoolean(System.getProperty("mglmod.Debug", "false"));
+        if(debug) {
+            MGL.LOGGER.error("mglmod: Sleeping for 1 minute, attach debugger NOW!");
+            try {
+                TimeUnit.MINUTES.sleep(1);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
         MGL.LOGGER.debug("mglmod: java.library.path is " + System.getProperty("java.library.path"));
 
@@ -30,8 +40,8 @@ public class MGLInjector implements PreLaunchEntrypoint {
             Files.createDirectories(mglDylibDir.toPath());
             Path glfwDylib = mglDylibDir.toPath().resolve("libGLFW.dylib");
             Path mglDylib = mglDylibDir.toPath().resolve("libMGL.dylib");
-            MGL.LOGGER.debug("mglmod: glfwDylib is " + glfwDylib.toAbsolutePath().toString());
-            MGL.LOGGER.debug("mglmod: mglDylib is " + mglDylib.toAbsolutePath().toString());
+            MGL.LOGGER.debug("mglmod: glfwDylib is " + glfwDylib.toAbsolutePath());
+            MGL.LOGGER.debug("mglmod: mglDylib is " + mglDylib.toAbsolutePath());
 
             try {
                 FileUtils.deleteDirectory(new File(mglDylibDir.toPath().toAbsolutePath() + "/macos/arm64/org/lwjgl/glfw"));
@@ -60,10 +70,8 @@ public class MGLInjector implements PreLaunchEntrypoint {
                     MGL.LOGGER.error("mglmod: GLFW dylib stream is null! Cannot copy dylib!");
                 }
             }
-
-            System.setProperty("org.lwjgl.librarypath", String.valueOf(mglDylibDir.toPath().toAbsolutePath()));
-            System.setProperty("org.lwjgl.glfw.libname", "libGLFW.dylib");
-            System.setProperty("org.lwjgl.opengl.libname", "libMGL.dylib");
+            System.setProperty("org.lwjgl.glfw.libname", mglDylibDir.toPath().toAbsolutePath()+"/libGLFW.dylib");
+            System.setProperty("org.lwjgl.opengl.libname", mglDylibDir.toPath().toAbsolutePath()+"/libMGL.dylib");
             MGL.LOGGER.debug("mglmod: MGL library path is " + mglDylibDir.toPath().toAbsolutePath());
         } catch (IOException e) {
             MGL.LOGGER.error("mglmod: Failed to inject MGL libs. Throwing exception.");

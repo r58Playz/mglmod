@@ -1,6 +1,6 @@
-package com.github.r58playz.mgl.mixin.debug;
+package ml.r58playz.mgl.mixin.debug;
 
-import com.github.r58playz.mgl.MGL;
+import ml.r58playz.mgl.MGL;
 import com.mojang.blaze3d.platform.GlStateManager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

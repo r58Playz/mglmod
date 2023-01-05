@@ -1,6 +1,6 @@
-package com.github.r58playz.mgl.mixin.debug;
+package ml.r58playz.mgl.mixin.debug;
 
-import com.github.r58playz.mgl.MGL;
+import ml.r58playz.mgl.MGL;
 import net.minecraft.client.gl.GlProgramManager;
 import net.minecraft.client.gl.GlShader;
 import org.spongepowered.asm.mixin.Mixin;

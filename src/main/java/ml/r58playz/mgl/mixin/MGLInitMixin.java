@@ -1,6 +1,6 @@
-package com.github.r58playz.mgl.mixin;
+package ml.r58playz.mgl.mixin;
 
-import com.github.r58playz.mgl.MGL;
+import ml.r58playz.mgl.MGL;
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
