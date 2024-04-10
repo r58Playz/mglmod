@@ -1,6 +1,6 @@
 # MGLmod
 
-> **Note**
+> [!NOTE]
 > I no longer have apple hardware, won't be working on this project anymore. I will still accept PRs.
 
 Various fixes for Minecraft so that [MGL](https://github.com/openglonmetal/MGL) works.
